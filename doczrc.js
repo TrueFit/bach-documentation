@@ -13,8 +13,6 @@ export default {
     "bach-material-ui",
   ],
   themeConfig: {
-    colors: {
-      primary: colors.primary,
-    },
+    mode: "dark",
   },
 }
