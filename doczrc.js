@@ -6,6 +6,7 @@ export default {
   ignore: ["readme.md"],
   menu: [
     "Getting Started",
+    "Advanced",
     "bach",
     "bach-redux",
     "bach-recompose",

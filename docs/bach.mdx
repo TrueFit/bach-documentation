@@ -3,8 +3,411 @@ name: bach
 route: /bach
 ---
 
-# Bach
+# @truefit/bach
 
-## Hello world
+## Overview
 
-Type here the most beautyiful getting started that you ever saw!
+This package is the core library for bach. The scope of this package is restricted to having React as it's sole dependency. @truefit/bach wraps most of the standard React hooks.
+
+## Enhancer Index
+
+- [withCallback](/bach#withcallback)
+- [withContext](/bach#withcontext)
+- [withEffect](/bach#witheffect)
+- [withLayoutEffect](/bach#withlayouteffect)
+- [withMemo](/bach#withmemo)
+- [withReducer](/bach#withreducer)
+- [withRef](/bach#withref)
+- [withState](/bach#withstate)
+
+## Installation
+
+```
+npm install @truefit/bach
+```
+
+or
+
+```
+yarn add @truefit/bach
+```
+
+## withCallback
+
+Creates a memoized callback passed to component with the name specified.
+
+_Helper Signature_
+
+| Parameter    | Type             | Description                                                                                           |
+| ------------ | ---------------- | ----------------------------------------------------------------------------------------------------- |
+| callbackName | string           | the name of the callback in the props passed to the wrapped component                                 |
+| fn           | js function      | the function to invoke when the callback is invoked by the component                                  |
+| conditions   | array of strings | names of the properties on the props object react should restrict the revaluation of this callback to |
+
+_Example 1_
+
+```
+import React from 'react';
+import {compose, withCallback} from '@truefit/bach';
+
+const Component = ({handleClick}) => (
+  <div>
+    <button onClick={handleClick}>
+      Click Me
+    </button>
+  </div>
+);
+
+export default compose(
+  withCallback('handleClick', (props) => () => {
+    alert('Hello There');
+  }),
+)(Component);
+```
+
+_Example 2_
+
+```
+import React from 'react';
+import {compose, withState, withCallback} from '@truefit/bach';
+
+const Component = ({count, alterCount}) => (
+  <div>
+    <h1>With Callback And State</h1>
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={alterCount(1)}>Increment</button>
+      <button onClick={alterCount(-1)}>Decrement</button>
+    </div>
+  </div>
+);
+
+export default compose(
+  withState('count', 'setCount', 0),
+
+  withCallback('alterCount', ({count, setCount}) => delta => () => {
+    setCount(count + delta);
+  }),
+)(Component);
+```
+
+_React Hook_
+
+[useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback)
+
+## withContext
+
+Accepts a context object and returns the current context value for that context.
+
+_Helper Signature_
+
+| Parameter       | Type             | Description                                                                                        |
+| --------------- | ---------------- | -------------------------------------------------------------------------------------------------- |
+| contextProperty | array of strings | the names of the props in the context that are mapped to the props passed to the wrapped component |
+| contextName     | string           | the name of the prop in the HOC that points to the context to use as source                        |
+
+_Example_
+
+```
+import React from 'react';
+import {compose, withContext} from '@truefit/bach';
+
+const Component = ({message}) => {
+  return (
+    <div>
+      <h1>With Context</h1>
+      <div>
+        <h2>{message}</h2>
+      </div>
+    </div>
+  );
+};
+
+const Child = compose(withContext(['message'], 'context'))(Component);
+
+const Parent = () => {
+  const context = React.createContext({message: 'Hello Child'});
+
+  return <Child context={context} />;
+};
+
+export default Parent;
+```
+
+_React Hook_
+
+[useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
+
+## withEffect
+
+Accepts a function that contains imperative, possibly effect creating code.
+
+_Helper Signature_
+
+| Parameter  | Type             | Description                                                                                     |
+| ---------- | ---------------- | ----------------------------------------------------------------------------------------------- |
+| fn         | js function      | the function to invoke when the values of properties change on the wrapped component            |
+| conditions | array of strings | names of the properties on the props object react should restrict the firing of the function to |
+
+_Example_
+
+```
+import React from 'react';
+import {compose, withEffect} from '@truefit/bach';
+
+const Component = () => (
+  <div>
+    <h1>With Effect</h1>
+  </div>
+);
+
+export default compose(
+  withEffect((props) => {
+    console.log('Effect Fired');
+  }),
+)(Component);
+```
+
+_React Hook_
+
+[useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect)
+
+## withLayoutEffect
+
+Like withEffect, but used for the times when invocation cannot be deferred, thus it fires synchronously after all DOM mutations.
+
+_Helper Signature_
+
+| Parameter  | Type             | Description                                                                                     |
+| ---------- | ---------------- | ----------------------------------------------------------------------------------------------- |
+| fn         | js function      | the function to invoke when the values of properties change on the wrapped component            |
+| conditions | array of strings | names of the properties on the props object react should restrict the firing of the function to |
+
+_Example_
+
+```
+import React from 'react';
+import {compose, withLayoutEffect} from '@truefit/bach';
+
+const Component = () => (
+  <div>
+    <h1>With Effect</h1>
+  </div>
+);
+
+export default compose(
+  withLayoutEffect((props) => {
+    console.log('Effect Fired');
+  }),
+)(Component);
+```
+
+_React Hook_
+
+[useLayoutEffect](https://reactjs.org/docs/hooks-reference.html#uselayouteffect)
+
+## withMemo
+
+Creates a memoized value.
+
+_Helper Signature_
+
+| Parameter  | Type             | Description                                                                                     |
+| ---------- | ---------------- | ----------------------------------------------------------------------------------------------- |
+| memoName   | string           | the name of the memoized value in the props passed to the wrapped component                     |
+| fn         | js function      | the function to invoke to produce the memoized value                                            |
+| conditions | array of strings | names of the properties on the props object react should restrict the firing of the function to |
+
+_Example_
+
+```
+import React from 'react';
+import {compose, withMemo} from '@truefit/bach';
+
+const Component = ({message}) => (
+  <div>
+    <h1>With Memo</h1>
+    <div>
+      <h2>Message: {message}</h2>
+    </div>
+  </div>
+);
+
+export default compose(
+  withMemo('message', () => {
+    return 'Hello World';
+  }),
+)(Component);
+```
+
+_React Hook_
+
+[useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)
+
+## withReducer
+
+An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method.
+
+@truefit/bach will create a dispatchProperty in props with the format `${reducerName}Dispatch`.
+
+_Helper Signature_
+
+| Parameter    | Type        | Description                                                                                                                                |
+| ------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| reducerName  | string      | the name of the reducer value in the props passed to the wrapped component                                                                 |
+| reducer      | js function | the reducer function that conforms to the signature (state, action) => newState                                                            |
+| initialValue | any         | the initial value of the reducer                                                                                                           |
+| init         | js function | a function that returns the initial value of the reducer the 1st time the reducer is invoked. Used for lazy initialization of the reducer. |
+
+_Example_
+
+```
+import React from 'react';
+import {compose, withReducer} from '@truefit/bach';
+
+const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
+
+const Component = ({count, countDispatch}) => (
+  <div>
+    <h1>With Reducer</h1>
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => countDispatch({type: INCREMENT})}>
+        Increment
+      </button>
+      <button onClick={() => countDispatch({type: DECREMENT})}>
+        Decrement
+      </button>
+    </div>
+  </div>
+);
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      return state + 1;
+
+    case DECREMENT:
+      return state - 1;
+
+    default:
+      return state;
+  }
+};
+
+export default compose(
+  withReducer('count', reducer, 0),
+)(Component);
+```
+
+_React Hook_
+
+[useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
+
+## withRef
+
+Creates a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
+
+_Helper Signature_
+
+| Parameter    | Type   | Description                                                              |
+| ------------ | ------ | ------------------------------------------------------------------------ |
+| refName      | string | the name of the ref pointer in the props passed to the wrapped component |
+| initialValue | any    | the initial value of the ref.current                                     |
+
+_Example_
+
+```
+import React from 'react';
+import {compose, withRef, withCallback} from '@truefit/bach';
+
+const Component = ({textBox1, textBox2, focus1, focus2}) => (
+  <div>
+    <h1>With Ref</h1>
+    <div>
+      <input ref={textBox1} />
+      <button onClick={focus1}>Focus Me</button>
+    </div>
+    <div>
+      <input ref={textBox2} />
+      <button onClick={focus2}>Focus Me</button>
+    </div>
+  </div>
+);
+
+export default compose(
+  withRef('textBox1', null),
+  withRef('textBox2', null),
+
+  withCallback('focus1', ({textBox1}) => {
+    textBox1.current.focus();
+  }),
+  withCallback('focus2', ({textBox2}) => {
+    textBox2.current.focus();
+  }),
+)(Component);
+```
+
+_React Hook_
+
+[useRef](https://reactjs.org/docs/hooks-reference.html#useref)
+
+## withState
+
+Creates a stateful value, and a function to update it.
+
+_Helper Signature_
+
+| Parameter        | Type            | Description                                                                                                   |
+| ---------------- | --------------- | ------------------------------------------------------------------------------------------------------------- |
+| stateName        | string          | the name of the state value in the props passed to the wrapped component                                      |
+| stateUpdaterName | string          | the name of the function in the props passed to the wrapped component that will update state when invoked     |
+| initialValue     | any OR function | the initial value of the state OR a function that receives `props` and returns the initial value of the state |
+
+_Example_
+
+```
+import React from 'react';
+import {compose, withState} from '@truefit/bach';
+
+const Component = ({count, setCount}) => (
+  <div>
+    <h1>With State</h1>
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  </div>
+);
+
+export default compose(withState('count', 'setCount', 0))(Component);
+```
+
+_Example (with initialValue function)_
+
+```
+import React from 'react';
+import PropTypes from 'prop-types';
+import {compose, withState} from '@truefit/bach';
+
+const Component = ({count, setCount}) => (
+  <div>
+    <h1>With State</h1>
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  </div>
+);
+
+Component.propTypes = {
+  initialCount: PropTypes.number,
+};
+
+export default compose(withState('count', 'setCount', ({initialCount}) => initialCount))(Component);
+```
+
+_React Hook_
+
+[useState](https://reactjs.org/docs/hooks-reference.html#usestate)
