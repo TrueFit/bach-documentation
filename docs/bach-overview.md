@@ -1,5 +1,5 @@
 ---
-id: bach-index
+id: bach-overview
 title: Overview
 ---
 

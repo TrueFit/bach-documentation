@@ -8,7 +8,7 @@
       "inspiration"
     ],
     "@truefit/bach": [
-      "bach-index",
+      "bach-overview",
       "bach-withcallback",
       "bach-withcontext",
       "bach-witheffect",
@@ -18,7 +18,7 @@
       "bach-withstate"
     ],
     "@truefit/bach-redux": [
-      "bachredux-index",
+      "bachredux-overview",
       "bachredux-withaction",
       "bachredux-withactions",
       "bachredux-withdispatch",
@@ -26,7 +26,7 @@
       "bachredux-withstore"
     ],
     "@truefit/bach-recompose": [
-      "bachrecompose-index",
+      "bachrecompose-overview",
       "bachrecompose-mapprops",
       "bachrecompose-renameprop",
       "bachrecompose-renameprops",
@@ -37,7 +37,7 @@
       "bachrecompose-withlifecycle"
     ],
     "@truefit/bach-materialui": [
-      "bachmaterialui-index",
+      "bachmaterialui-overview",
       "bachmaterialui-withstyles",
       "bachmaterialui-withtheme"
     ]

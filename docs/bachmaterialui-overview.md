@@ -1,5 +1,5 @@
 ---
-id: bachmaterialui-index
+id: bachmaterialui-overview
 title: Overview
 ---
 

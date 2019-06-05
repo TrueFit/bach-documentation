@@ -1,5 +1,5 @@
 ---
-id: bachredux-index
+id: bachredux-overview
 title: Overview
 ---
 
