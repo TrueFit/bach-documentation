@@ -1,0 +1,46 @@
+{
+  "docs": {
+    "Overview": [
+      "index",
+      "enhancers",
+      "custom-enhancers",
+      "contributing",
+      "inspiration"
+    ],
+    "@truefit/bach": [
+      "bach-index",
+      "bach-withcallback",
+      "bach-withcontext",
+      "bach-witheffect",
+      "bach-withlayouteffect",
+      "bach-withmemo",
+      "bach-withref",
+      "bach-withstate"
+    ],
+    "@truefit/bach-redux": [
+      "bachredux-index",
+      "bachredux-withaction",
+      "bachredux-withactions",
+      "bachredux-withdispatch",
+      "bachredux-withselector",
+      "bachredux-withstore"
+    ],
+    "@truefit/bach-recompose": [
+      "bachrecompose-index",
+      "bachrecompose-mapprops",
+      "bachrecompose-renameprop",
+      "bachrecompose-renameprops",
+      "bachrecompose-renderif",
+      "bachrecompose-rendernothing",
+      "bachrecompose-withprops",
+      "bachrecompose-withhandlers",
+      "bachrecompose-withlifecycle"
+    ],
+    "@truefit/bach-materialui": [
+      "bachmaterialui-index",
+      "bachmaterialui-withstyles",
+      "bachmaterialui-withtheme"
+    ]
+  },
+  "docs-other": {}
+}
