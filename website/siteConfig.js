@@ -21,6 +21,11 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [{ search: true }],
+  
+  algolia: {
+    apiKey: 'c7de271b8b6a2e67ef5029316e5101a8',
+    indexName: 'truefit-bach',
+  },
 
   /* path to images for header/footer */
   headerIcon: null,
