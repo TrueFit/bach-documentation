@@ -27,6 +27,8 @@ const siteConfig = {
     indexName: 'truefit-bach',
   },
 
+  gaTrackingId: 'UA-68944174-4',
+
   /* path to images for header/footer */
   headerIcon: null,
   footerIcon: null,
