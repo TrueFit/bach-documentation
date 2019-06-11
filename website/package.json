@@ -12,5 +12,6 @@
     "docusaurus": "^1.11.0"
   },
   "dependencies": {},
-  "license": "MIT"
+  "license": "MIT",
+  "version": "1.0.0"
 }
