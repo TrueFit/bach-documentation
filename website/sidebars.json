@@ -15,7 +15,8 @@
       "bach-withlayouteffect",
       "bach-withmemo",
       "bach-withref",
-      "bach-withstate"
+      "bach-withstate",
+      "bach-withhook"
     ],
     "@truefit/bach-redux": [
       "bachredux-overview",

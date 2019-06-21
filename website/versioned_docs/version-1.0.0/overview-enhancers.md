@@ -22,6 +22,7 @@ _Order matters:_ we keep the definition of the generated code in the same order 
 - [withReducer](/docs/bach-withreducer)
 - [withRef](/docs/bach-withref)
 - [withState](/docs/bach-withstate)
+- [withHook](/docs/bach-withhook)
 
 ### @truefit/bach-redux
 

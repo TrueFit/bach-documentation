@@ -15,6 +15,7 @@ This package is the core library for Bach. The scope of this package is restrict
 - [withReducer](/docs/bach-withreducer)
 - [withRef](/docs/bach-withref)
 - [withState](/docs/bach-withstate)
+- [withHook](/docs/bach-withhook)
 
 ## Installation
 
