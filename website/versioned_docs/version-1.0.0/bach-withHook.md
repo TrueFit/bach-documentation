@@ -1,6 +1,6 @@
 ---
 id: version-1.0.0-bach-withhook
-title: withEffect
+title: withHook
 original_id: bach-withhook
 ---
 
