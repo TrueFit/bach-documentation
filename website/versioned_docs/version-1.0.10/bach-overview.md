@@ -1,6 +1,7 @@
 ---
-id: bach-overview
+id: version-1.0.10-bach-overview
 title: Overview
+original_id: bach-overview
 ---
 
 This package is the core library for Bach. The scope of this package is restricted to having React as it's sole dependency. @truefit/bach wraps most of the standard React hooks.

@@ -16,7 +16,8 @@
       "bach-withmemo",
       "bach-withref",
       "bach-withstate",
-      "bach-withhook"
+      "bach-withhook",
+      "bach-withstaticprops"
     ],
     "@truefit/bach-redux": [
       "bachredux-overview",

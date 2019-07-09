@@ -16,7 +16,8 @@
       "version-1.0.10-bach-withmemo",
       "version-1.0.10-bach-withref",
       "version-1.0.10-bach-withstate",
-      "version-1.0.10-bach-withhook"
+      "version-1.0.10-bach-withhook",
+      "version-1.0.10-bach-withstaticprops"
     ],
     "@truefit/bach-redux": [
       "version-1.0.10-bachredux-overview",
