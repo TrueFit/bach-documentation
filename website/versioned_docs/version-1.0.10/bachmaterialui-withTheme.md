@@ -1,6 +1,7 @@
 ---
-id: bachmaterialui-withtheme
+id: version-1.0.10-bachmaterialui-withtheme
 title: withTheme
+original_id: bachmaterialui-withtheme
 ---
 
 Provides access to current theme.

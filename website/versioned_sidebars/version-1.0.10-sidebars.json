@@ -1,0 +1,56 @@
+{
+  "version-1.0.10-docs": {
+    "Overview": [
+      "version-1.0.10-index",
+      "version-1.0.10-enhancers",
+      "version-1.0.10-custom-enhancers",
+      "version-1.0.10-contributing",
+      "version-1.0.10-inspiration"
+    ],
+    "@truefit/bach": [
+      "version-1.0.10-bach-overview",
+      "version-1.0.10-bach-withcallback",
+      "version-1.0.10-bach-withcontext",
+      "version-1.0.10-bach-witheffect",
+      "version-1.0.10-bach-withlayouteffect",
+      "version-1.0.10-bach-withmemo",
+      "version-1.0.10-bach-withref",
+      "version-1.0.10-bach-withstate",
+      "version-1.0.10-bach-withhook"
+    ],
+    "@truefit/bach-redux": [
+      "version-1.0.10-bachredux-overview",
+      "version-1.0.10-bachredux-withaction",
+      "version-1.0.10-bachredux-withactions",
+      "version-1.0.10-bachredux-withdispatch",
+      "version-1.0.10-bachredux-withselector",
+      "version-1.0.10-bachredux-withstore"
+    ],
+    "@truefit/bach-recompose": [
+      "version-1.0.10-bachrecompose-overview",
+      "version-1.0.10-bachrecompose-mapprops",
+      "version-1.0.10-bachrecompose-renameprop",
+      "version-1.0.10-bachrecompose-renameprops",
+      "version-1.0.10-bachrecompose-renderif",
+      "version-1.0.10-bachrecompose-rendernothing",
+      "version-1.0.10-bachrecompose-withprops",
+      "version-1.0.10-bachrecompose-withhandlers",
+      "version-1.0.10-bachrecompose-withlifecycle"
+    ],
+    "@truefit/bach-materialui": [
+      "version-1.0.10-bachmaterialui-overview",
+      "version-1.0.10-bachmaterialui-withstyles",
+      "version-1.0.10-bachmaterialui-withtheme"
+    ],
+    "@truefit/bach-formik": [
+      "version-1.0.10-bachformik-overview",
+      "version-1.0.10-bachformik-withformik"
+    ],
+    "@truefit/bach-rn-elements": [
+      "version-1.0.10-bachrnelements-overview",
+      "version-1.0.10-bachrnelements-withstyles",
+      "version-1.0.10-bachrnelements-withbadge"
+    ]
+  },
+  "version-1.0.10-docs-other": {}
+}
