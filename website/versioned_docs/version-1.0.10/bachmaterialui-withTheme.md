@@ -17,7 +17,7 @@ Provides access to current theme.
 ```
 import React from 'react';
 import {compose} from '@truefit/bach';
-import {withTheme} from '@truefit/bach-react-material';
+import {withTheme} from '@truefit/bach-material-ui';
 
 const WithTheme = ({theme}) => (
   <div style={{fontSize: theme.fontSize}}>

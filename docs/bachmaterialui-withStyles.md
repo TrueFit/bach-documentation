@@ -20,7 +20,7 @@ You can also specify a function as the value of an individual property and be pa
 ```
 import React from 'react';
 import {compose, withState, withCallback} from '@truefit/bach';
-import {withStyles} from '@truefit/bach-react-material';
+import {withStyles} from '@truefit/bach-material-ui';
 
 const WithStyles = ({classes, fontSize, increase}) => (
   <div className={classes.container}>
