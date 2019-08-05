@@ -39,7 +39,7 @@ const Component = ({greeting, target}) => {
 const Child = compose(
   withContext(['greeting'], Context),
   withContext(['target'], 'context'),
-)(Component, {debug: {breakpoint: true}});
+)(Component);
 
 const Parent = () => {
   return <Child context={Context} />;
