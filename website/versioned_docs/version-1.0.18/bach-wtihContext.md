@@ -1,6 +1,7 @@
 ---
-id: bach-withcontext
+id: version-1.0.18-bach-withcontext
 title: withContext
+original_id: bach-withcontext
 ---
 
 Accepts a context object and returns the current context value for that context.
