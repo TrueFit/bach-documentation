@@ -1,6 +1,7 @@
 ---
-id: bachrnelements-overview
+id: version-1.1.0-bachrnelements-overview
 title: Overview
+original_id: bachrnelements-overview
 ---
 
 This library allows components composed with [@truefit/bach](https://github.com/truefit/bach) to build their react native apps using [react-native-elements](https://react-native-training.github.io/react-native-elements/).

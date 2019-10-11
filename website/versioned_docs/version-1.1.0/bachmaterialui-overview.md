@@ -1,6 +1,7 @@
 ---
-id: bachmaterialui-overview
+id: version-1.1.0-bachmaterialui-overview
 title: Overview
+original_id: bachmaterialui-overview
 ---
 
 This library connects components composed with [@truefit/bach](https://github.com/truefit/bach) to [Material UI](https://material-ui.com/).

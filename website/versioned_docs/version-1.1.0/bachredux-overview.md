@@ -1,6 +1,7 @@
 ---
-id: bachredux-overview
+id: version-1.1.0-bachredux-overview
 title: Overview
+original_id: bachredux-overview
 ---
 
 This library brings redux connectivity to components composed with [@truefit/bach](https://github.com/truefit/bach) allowing you to add actions and selectors directly in your enhancer chain, rather than needing an extra HOC for connect.
