@@ -19,6 +19,7 @@ Not all of the enhancers require hooks to accomplish their tasks, that said, the
 - [withProps](/docs/bachrecompose-withprops)
 - [withHandlers](/docs/bachrecompose-withhandlers)
 - [withLifecycle](/docs/bachrecompose-withlifecycle)
+- [memo](/docs/bachrecompose-memo)
 
 ## Installation
 

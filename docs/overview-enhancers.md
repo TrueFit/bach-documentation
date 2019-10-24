@@ -42,6 +42,7 @@ _Order matters:_ we keep the definition of the generated code in the same order 
 - [withProps](/docs/bachrecompose-withprops)
 - [withHandlers](/docs/bachrecompose-withhandlers)
 - [withLifecycle](/docs/bachrecompose-withlifecycle)
+- [memo](/docs/bachrecompose-memo)
 
 ### @truefit/bach-material-ui
 
