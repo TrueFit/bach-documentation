@@ -1,6 +1,7 @@
 ---
-id: bachrecompose-overview
+id: version-1.1.1-bachrecompose-overview
 title: Overview
+original_id: bachrecompose-overview
 ---
 
 A set of enhancers for [@truefit/bach](https://github.com/TrueFit/bach) inspired by [recompose](https://github.com/acdlite/recompose).

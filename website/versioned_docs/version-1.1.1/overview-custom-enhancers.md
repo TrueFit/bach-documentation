@@ -1,6 +1,7 @@
 ---
-id: custom-enhancers
+id: version-1.1.1-custom-enhancers
 title: Custom Enhancers
+original_id: custom-enhancers
 ---
 
 We would love to see members of the community add their own enhancers. If you come up with one that is applicable to the larger community (for example, wrapping a different React-CSS framework), please contact us so that we can add it to the list above.
