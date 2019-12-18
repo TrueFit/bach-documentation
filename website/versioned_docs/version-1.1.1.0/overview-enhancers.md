@@ -1,6 +1,7 @@
 ---
-id: enhancers
+id: version-1.1.1.0-enhancers
 title: Enhancers
+original_id: enhancers
 ---
 
 Enhancers are the central mechanism for composing components with @truefit/bach. In general, you will declare a series of enhancers for each component that together compose all of the supporting logic that component needs to render. For example, you commonly have a couple of state enhancers combined with callbacks and effects.

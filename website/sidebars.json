@@ -43,7 +43,12 @@
       "bachmaterialui-withstyles",
       "bachmaterialui-withtheme"
     ],
-    "@truefit/bach-formik": ["bachformik-overview", "bachformik-withformik"],
+    "@truefit/bach-formik": [
+      "bachformik-overview",
+      "bachformik-withformik",
+      "bachformik-withfield",
+      "bachformik-withformikcontext"
+    ],
     "@truefit/bach-rn-elements": [
       "bachrnelements-overview",
       "bachrnelements-withstyles",

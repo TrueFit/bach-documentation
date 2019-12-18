@@ -1,0 +1,59 @@
+{
+  "version-1.1.1.0-docs": {
+    "Overview": [
+      "version-1.1.1.0-index",
+      "version-1.1.1.0-enhancers",
+      "version-1.1.1.0-custom-enhancers",
+      "version-1.1.1.0-contributing",
+      "version-1.1.1.0-inspiration"
+    ],
+    "@truefit/bach": [
+      "version-1.1.1.0-bach-overview",
+      "version-1.1.1.0-bach-withcallback",
+      "version-1.1.1.0-bach-withcontext",
+      "version-1.1.1.0-bach-witheffect",
+      "version-1.1.1.0-bach-withlayouteffect",
+      "version-1.1.1.0-bach-withmemo",
+      "version-1.1.1.0-bach-withref",
+      "version-1.1.1.0-bach-withstate",
+      "version-1.1.1.0-bach-withhook",
+      "version-1.1.1.0-bach-withstaticprops"
+    ],
+    "@truefit/bach-redux": [
+      "version-1.1.1.0-bachredux-overview",
+      "version-1.1.1.0-bachredux-withaction",
+      "version-1.1.1.0-bachredux-withactions",
+      "version-1.1.1.0-bachredux-withdispatch",
+      "version-1.1.1.0-bachredux-withselector",
+      "version-1.1.1.0-bachredux-withstore"
+    ],
+    "@truefit/bach-recompose": [
+      "version-1.1.1.0-bachrecompose-overview",
+      "version-1.1.1.0-bachrecompose-mapprops",
+      "version-1.1.1.0-bachrecompose-renameprop",
+      "version-1.1.1.0-bachrecompose-renameprops",
+      "version-1.1.1.0-bachrecompose-renderif",
+      "version-1.1.1.0-bachrecompose-rendernothing",
+      "version-1.1.1.0-bachrecompose-withprops",
+      "version-1.1.1.0-bachrecompose-withhandlers",
+      "version-1.1.1.0-bachrecompose-withlifecycle"
+    ],
+    "@truefit/bach-materialui": [
+      "version-1.1.1.0-bachmaterialui-overview",
+      "version-1.1.1.0-bachmaterialui-withstyles",
+      "version-1.1.1.0-bachmaterialui-withtheme"
+    ],
+    "@truefit/bach-formik": [
+      "version-1.1.1.0-bachformik-overview",
+      "version-1.1.1.0-bachformik-withformik",
+      "version-1.1.1.0-bachformik-withfield",
+      "version-1.1.1.0-bachformik-withformikcontext"
+    ],
+    "@truefit/bach-rn-elements": [
+      "version-1.1.1.0-bachrnelements-overview",
+      "version-1.1.1.0-bachrnelements-withstyles",
+      "version-1.1.1.0-bachrnelements-withbadge"
+    ]
+  },
+  "version-1.1.1.0-docs-other": {}
+}
