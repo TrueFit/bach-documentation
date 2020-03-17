@@ -14,7 +14,36 @@ Allows you to specify a conditional function. If the condition is true, compose 
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose, withEffect, withState} from '@truefit/bach';
+import {renderIf} from '@truefit/bach-recompose';
+
+type Props = {
+  loading: boolean;
+  setLoading: (b: boolean) => void;
+};
+
+const Loading = () => <div>Loading</div>;
+
+const Content = () => <div>Content</div>;
+
+export default compose(
+  withState('loading', 'setLoading', true),
+  withEffect<Props>(({setLoading}) => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  }, []),
+  renderIf<Props>(({loading}) => loading, Loading),
+)(Content);
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose, withEffect, withState} from '@truefit/bach';
 import {renderIf} from '@truefit/bach-recompose';

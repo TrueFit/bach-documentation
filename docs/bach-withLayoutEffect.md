@@ -14,7 +14,28 @@ Like withEffect, but used for the times when invocation cannot be deferred, thus
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose, withLayoutEffect} from '@truefit/bach';
+
+const Component = () => (
+  <div>
+    <h1>With Effect</h1>
+  </div>
+);
+
+export default compose(
+  withLayoutEffect(() => {
+    console.log('Effect Fired');
+  }),
+)(Component);
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose, withLayoutEffect} from '@truefit/bach';
 

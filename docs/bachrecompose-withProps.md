@@ -13,7 +13,38 @@ Allows you to supply multiple properties to add the props passed to the wrapped 
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose} from '@truefit/bach';
+import {withProps} from '@truefit/bach-recompose';
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const WithProps = ({title, description}: Props) => (
+  <div>
+    <h1>withProps</h1>
+    <h2>Title: {title}</h2>
+    <h2>Description: {description}</h2>
+  </div>
+);
+
+export default compose(
+  withProps<Props>({
+    title: 'Hello',
+    description: () => 'World',
+  }),
+)(WithProps);
+
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose} from '@truefit/bach';
 import {withProps} from '@truefit/bach-recompose';

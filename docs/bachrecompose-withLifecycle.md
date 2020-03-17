@@ -3,7 +3,7 @@ id: bachrecompose-withlifecycle
 title: withLifecycle
 ---
 
-Allows for more readable code when dealing with the traditional component lifecycle. We use the traditional function names componentDidMount, componentDidUpdate, and componentWillUnmount.
+Allows for an easier transition from class based components. We use the traditional function names componentDidMount, componentDidUpdate, and componentWillUnmount.
 
 ## Helper Signature
 
@@ -13,7 +13,40 @@ Allows for more readable code when dealing with the traditional component lifecy
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose} from '@truefit/bach';
+import {withLifecycle} from '@truefit/bach-recompose';
+
+const Component = () => (
+  <div>
+    <h1>With Lifecycle</h1>
+  </div>
+);
+
+export default compose(
+  withLifecycle<any>({
+    componentDidMount: props => {
+      console.log('Component Did Mount: ', props);
+    },
+
+    componentDidUpdate: (props, prevProps) => {
+      console.log('Component Did Update', props, prevProps);
+    },
+
+    componentWillUnmount: props => {
+      console.log('Component Will Unmount', props);
+    },
+  }),
+)(Component);
+
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose} from '@truefit/bach';
 import {withLifecycle} from '@truefit/bach-recompose';

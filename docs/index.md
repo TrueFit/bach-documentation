@@ -9,6 +9,12 @@ The goal is to help create a codebase that is readable, flexible, testable, and 
 
 You can find a full React project with simple working examples of each hook, as well as more complex examples that combine hooks here: [https://github.com/TrueFit/bach-examples](https://github.com/TrueFit/bach-examples).
 
+## Version 2.0
+
+With the release of version 2.0, Bach has been updated to Typescript.
+
+We did our best to maintain backwards compatibility and believe we have. If you find something, please let us know.
+
 ## Conception
 
 At a high level, we liked the syntax that [Recompose](https://github.com/acdlite/recompose) enabled in our source. The advent of React hooks has forced us to move away from recompose since it has a couple of major drawbacks in this new world (no hooks, HOC hell, and the author deprecated it). We searched for a comparable library in the community, but were unable to find one that fit our needs.

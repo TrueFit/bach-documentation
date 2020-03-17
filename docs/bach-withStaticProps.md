@@ -13,7 +13,30 @@ _Helper Signature_
 
 _Example_
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose, withStaticProps} from '@truefit/bach';
+
+const Component = () => (
+  <div>
+    <h1>With Static Props</h1>
+  </div>
+);
+
+export default compose(
+  withStaticProps({
+    navigationOptions: {
+      headerTitle: 'Bach',
+    },
+  }),
+)(Component);
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose, withStaticProps} from '@truefit/bach';
 

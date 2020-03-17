@@ -11,11 +11,44 @@ There are no parameters for this enhancer.
 
 ## Example
 
-```
+```Typescript
 import React from 'react';
 import {compose} from '@truefit/bach';
 import {withDispatch} from '@truefit/bach-redux';
-import {ADD_TODO} from '../actions';
+import {Dispatch} from 'redux';
+
+const ADD_TODO = 'ADD_TODO';
+
+type Props = {
+  dispatch: Dispatch;
+};
+
+const WithDispatch = ({dispatch}: Props) => (
+  <div>
+    <h1>withDispatch</h1>
+    <button
+      type="button"
+      onClick={() => {
+        dispatch({
+          type: ADD_TODO,
+          payload: 'New ToDo from withDispatch',
+        });
+      }}
+    >
+      Click Me
+    </button>
+  </div>
+);
+
+export default compose(withDispatch())(WithDispatch);
+```
+
+```Javascript
+import React from 'react';
+import {compose} from '@truefit/bach';
+import {withDispatch} from '@truefit/bach-redux';
+
+const ADD_TODO = 'ADD_TODO';
 
 const WithDispatch = ({dispatch}) => (
   <div>

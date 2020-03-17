@@ -15,7 +15,38 @@ _Note: this can be a dangerous utility as it completely replaces the props objec
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose} from '@truefit/bach';
+import {mapProps} from '@truefit/bach-recompose';
+
+type PublicProps = {
+  note: string;
+};
+
+type InternalProps = {
+  message: string;
+};
+
+const ChildContent = ({message}: InternalProps) => (
+  <div>
+    <h1>mapProps</h1>
+    <h2>Message: {message}</h2>
+  </div>
+);
+
+const Child = compose<PublicProps>(
+  mapProps<PublicProps, InternalProps>(({note, ...props}) => ({message: note, ...props})),
+)(ChildContent);
+
+export default () => <Child note="Hello World!" />;
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose} from '@truefit/bach';
 import {mapProps} from '@truefit/bach-recompose';

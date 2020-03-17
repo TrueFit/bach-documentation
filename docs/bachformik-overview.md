@@ -8,8 +8,6 @@ This library allows components composed with [@truefit/bach](https://github.com/
 ## Enhancer List
 
 - [withFormik](/docs/bachformik-withformik)
-- [withField](/docs/bachformik-withfield)
-- [withFormikContext](/docs/bachformik-withformikcontext)
 
 ## Installation
 

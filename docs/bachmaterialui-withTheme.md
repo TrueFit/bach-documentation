@@ -13,20 +13,44 @@ Provides access to current theme.
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose} from '@truefit/bach';
+import {withTheme} from '@truefit/bach-material-ui';
+import {Theme} from '@material-ui/core';
+
+type Props = {
+  theme: Theme;
+};
+
+const Example = ({theme}: Props) => (
+  <div style={{fontSize: theme.typography.fontSize}}>Hello World</div>
+);
+
+export default compose(
+  withTheme()
+)(Example);
+
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose} from '@truefit/bach';
 import {withTheme} from '@truefit/bach-material-ui';
 
-const WithTheme = ({theme}) => (
-  <div style={{fontSize: theme.fontSize}}>
+const WithStyles = ({theme}) => (
+  <div style={{fontSize: theme.typography.fontSize}}>
     Hello World
   </div>
 );
 
 export default compose(
   withTheme(),
-)(WithTheme);
+)(WithStyles);
 ```
 
 ## Material UI Hook

@@ -15,7 +15,44 @@ Allows you to specify a single action creator to be connected to the store. _See
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose} from '@truefit/bach';
+import {withAction} from '@truefit/bach-redux';
+import {PayloadAction} from '@reduxjs/toolkit';
+
+const ADD_TODO = 'ADD_TODO';
+const addToDo = (note: string): PayloadAction<string> => ({
+  type: ADD_TODO,
+  payload: note,
+});
+
+type Props = {
+  addToDo: (note: string) => void;
+};
+
+const WithAction = ({addToDo}: Props) => (
+  <div>
+    <h1>withAction</h1>
+    <button
+      type="button"
+      onClick={() => {
+        addToDo('New ToDo from withAction');
+      }}
+    >
+      Click Me
+    </button>
+  </div>
+);
+
+export default compose(withAction<Props>('addToDo', addToDo))(WithAction);
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose} from '@truefit/bach';
 import {withAction} from '@truefit/bach-redux';
@@ -39,5 +76,7 @@ const WithAction = ({addToDo}) => (
   </div>
 );
 
-export default compose(withAction('addToDo', addToDo))(WithAction);
+export default compose(
+  withAction('addToDo', addToDo)
+)(WithAction);
 ```

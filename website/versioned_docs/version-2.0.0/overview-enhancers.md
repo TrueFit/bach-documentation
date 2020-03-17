@@ -1,5 +1,5 @@
 ---
-id: version-1.1.1.0-enhancers
+id: version-2.0.0-enhancers
 title: Enhancers
 original_id: enhancers
 ---
@@ -53,10 +53,24 @@ _Order matters:_ we keep the definition of the generated code in the same order 
 ### @truefit/bach-formik
 
 - [withFormik](/docs/bachformik-withformik)
-- [withField](/docs/bachformik-withfield)
-- [withFormikContext](/docs/bachformik-withformikcontext)
 
 ### @truefit/bach-rn-elements
 
 - [withStyles](/docs/bachrnelements-withstyles)
-- [withBadges](/docs/bachrnelements-withbadges)
+
+### @truefit/bach-react-router
+
+- [withHistory](/docs/bachreactrouter-withhistory)
+- [withLocation](/docs/bachreactrouter-withlocation)
+- [withParams](/docs/bachreactrouter-withparams)
+- [withRouteMatch](/docs/bachreactrouter-withroutematch)
+
+### @truefit/bach-react-navigation
+
+- [withFocusEffect](/docs/bachreactnavigation-withfocuseffect)
+- [withIsFocused](/docs/bachreactnavigation-withisfocused)
+- [withLinking](/docs/bachreactnavigation-withlinking)
+- [withNavigation](/docs/bachreactnavigation-withnavigation)
+- [withNavigationState](/docs/bachreactnavigation-withnavigationState)
+- [withRoute](/docs/bachreactnavigation-withroute)
+- [withScrollToTop](/docs/bachreactnavigation-withscrolltotop)

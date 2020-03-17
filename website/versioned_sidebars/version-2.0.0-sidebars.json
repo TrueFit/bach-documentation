@@ -1,0 +1,74 @@
+{
+  "version-2.0.0-docs": {
+    "Overview": [
+      "version-2.0.0-index",
+      "version-2.0.0-enhancers",
+      "version-2.0.0-custom-enhancers",
+      "version-2.0.0-contributing",
+      "version-2.0.0-inspiration"
+    ],
+    "@truefit/bach": [
+      "version-2.0.0-bach-overview",
+      "version-2.0.0-bach-withcallback",
+      "version-2.0.0-bach-withcontext",
+      "version-2.0.0-bach-witheffect",
+      "version-2.0.0-bach-withlayouteffect",
+      "version-2.0.0-bach-withmemo",
+      "version-2.0.0-bach-withref",
+      "version-2.0.0-bach-withreducer",
+      "version-2.0.0-bach-withstate",
+      "version-2.0.0-bach-withhook",
+      "version-2.0.0-bach-withstaticprops"
+    ],
+    "@truefit/bach-redux": [
+      "version-2.0.0-bachredux-overview",
+      "version-2.0.0-bachredux-withaction",
+      "version-2.0.0-bachredux-withactions",
+      "version-2.0.0-bachredux-withdispatch",
+      "version-2.0.0-bachredux-withselector",
+      "version-2.0.0-bachredux-withstore"
+    ],
+    "@truefit/bach-recompose": [
+      "version-2.0.0-bachrecompose-overview",
+      "version-2.0.0-bachrecompose-mapprops",
+      "version-2.0.0-bachrecompose-renameprop",
+      "version-2.0.0-bachrecompose-renameprops",
+      "version-2.0.0-bachrecompose-renderif",
+      "version-2.0.0-bachrecompose-rendernothing",
+      "version-2.0.0-bachrecompose-withprops",
+      "version-2.0.0-bachrecompose-withhandlers",
+      "version-2.0.0-bachrecompose-withlifecycle"
+    ],
+    "@truefit/bach-materialui": [
+      "version-2.0.0-bachmaterialui-overview",
+      "version-2.0.0-bachmaterialui-withstyles",
+      "version-2.0.0-bachmaterialui-withtheme"
+    ],
+    "@truefit/bach-formik": [
+      "version-2.0.0-bachformik-overview",
+      "version-2.0.0-bachformik-withformik"
+    ],
+    "@truefit/bach-rn-elements": [
+      "version-2.0.0-bachrnelements-overview",
+      "version-2.0.0-bachrnelements-withstyles"
+    ],
+    "@truefit/bach-react-router": [
+      "version-2.0.0-bachreactrouter-overview",
+      "version-2.0.0-bachreactrouter-withhistory",
+      "version-2.0.0-bachreactrouter-withlocation",
+      "version-2.0.0-bachreactrouter-withparams",
+      "version-2.0.0-bachreactrouter-withroutematch"
+    ],
+    "@truefit/bach-react-navigation": [
+      "version-2.0.0-bachreactnavigation-overview",
+      "version-2.0.0-bachreactnavigation-withfocuseffect",
+      "version-2.0.0-bachreactnavigation-withisfocused",
+      "version-2.0.0-bachreactnavigation-withlinking",
+      "version-2.0.0-bachreactnavigation-withnavigation",
+      "version-2.0.0-bachreactnavigation-withnavigationstate",
+      "version-2.0.0-bachreactnavigation-withroute",
+      "version-2.0.0-bachreactnavigation-withscrolltotop"
+    ]
+  },
+  "version-2.0.0-docs-other": {}
+}

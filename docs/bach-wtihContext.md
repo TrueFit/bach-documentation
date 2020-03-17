@@ -14,38 +14,60 @@ Accepts a context object and returns the current context value for that context.
 
 ## Example
 
-```
+#### Typescript
+
+```Typescript
 import React from 'react';
 import {compose, withContext} from '@truefit/bach';
 
-const Context = React.createContext({
-  greeting: 'Hello',
-  target: 'World',
-});
+type Props = {
+  message: string;
+};
 
-const Component = ({greeting, target}) => {
+type Context = {
+  message: string;
+};
+
+const context = React.createContext<Context>({message: 'Hello There'});
+
+const Component = ({message}: Props) => {
   return (
     <div>
       <h1>With Context</h1>
       <div>
-        <h2>
-          {greeting} {target}
-        </h2>
+        <h2>{message}</h2>
       </div>
     </div>
   );
 };
 
-const Child = compose(
-  withContext(['greeting'], Context),
-  withContext(['target'], 'context'),
+export default compose(
+  withContext<Context>(['message'], context)
 )(Component);
+```
 
-const Parent = () => {
-  return <Child context={Context} />;
+#### Javascript
+
+```Javascript
+import React from 'react';
+import {compose, withContext} from '@truefit/bach';
+
+const context = React.createContext({message: 'Hello Child'});
+
+const Component = ({message}) => {
+  return (
+    <div>
+      <h1>With Context</h1>
+      <div>
+        <h2>{message}</h2>
+      </div>
+    </div>
+  );
 };
 
-export default Parent;
+export default compose(
+  withContext(['message'], context)
+)(Component);
 ```
 
 ## React Hook

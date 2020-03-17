@@ -14,7 +14,28 @@ Accepts a function that contains imperative, possibly effect creating code.
 
 ## Example
 
+#### Typescript
+
+```Javascript
+import React from 'react';
+import {compose, withEffect} from '@truefit/bach';
+
+const Component = () => (
+  <div>
+    <h1>With Effect</h1>
+  </div>
+);
+
+export default compose(
+  withEffect(() => {
+    console.log('Effect Fired');
+  }),
+)(Component);
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose, withEffect} from '@truefit/bach';
 

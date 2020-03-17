@@ -15,7 +15,33 @@ Creates a memoized value.
 
 ## Example
 
+```Typescript
+import React from 'react';
+import {compose, withMemo} from '@truefit/bach';
+
+type Props = {
+  message: string;
+};
+
+const Component = ({message}: Props) => (
+  <div>
+    <h1>With Memo</h1>
+    <div>
+      <h2>Message: {message}</h2>
+    </div>
+  </div>
+);
+
+export default compose(
+  withMemo<Props>('message', () => {
+    return 'Hello World';
+  }),
+)(Component);
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose, withMemo} from '@truefit/bach';
 

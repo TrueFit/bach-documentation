@@ -17,7 +17,70 @@ You can also specify a function as the value of an individual property and be pa
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose, withState, withCallback} from '@truefit/bach';
+import {withStyles} from '@truefit/bach-material-ui';
+import {Theme} from '@material-ui/core';
+
+type Props = {
+  classes: {
+    container: string;
+    h1: string;
+    h2: string;
+    button: string;
+  };
+
+  fontSize: number;
+
+  setFontSize: (n: number) => void;
+  increase: () => void;
+};
+
+const WithStyles = ({classes, fontSize, increase}: Props) => (
+  <div className={classes.container}>
+    <h1 className={classes.h1}>withStyles</h1>
+    <h2 className={classes.h2}>Font Size: {fontSize}</h2>
+    <button type="button" className={classes.button} onClick={increase}>
+      ^ Increase ^
+    </button>
+  </div>
+);
+
+export default compose(
+  withState('fontSize', 'setFontSize', 12),
+  withCallback<Props>('increase', ({fontSize, setFontSize}) => () => {
+    setFontSize(fontSize + 1);
+  }),
+  withStyles((theme: Theme) => ({
+    container: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100%',
+      flexDirection: 'column',
+    },
+    h1: {
+      color: theme.palette.primary.main,
+    },
+    h2: {
+      color: theme.palette.secondary.main,
+      fontSize: ({fontSize}: Props) => fontSize,
+    },
+    button: {
+      height: 50,
+      width: 100,
+      borderRadius: 8,
+    },
+  })),
+)(WithStyles);
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose, withState, withCallback} from '@truefit/bach';
 import {withStyles} from '@truefit/bach-material-ui';

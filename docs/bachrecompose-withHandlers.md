@@ -13,7 +13,49 @@ Allows you to quickly define multiple withCallback instances in one definition.
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose} from '@truefit/bach';
+import {withHandlers} from '@truefit/bach-recompose';
+
+type Props = {
+  sayHello: () => void;
+  sayGoodbye: () => void;
+};
+
+const Component = ({sayHello, sayGoodbye}: Props) => (
+  <div>
+    <h1>With Handlers</h1>
+    <div>
+      <button type="button" onClick={sayHello}>
+        Say Hello
+      </button>
+    </div>
+    <div>
+      <button type="button" onClick={sayGoodbye}>
+        Say Goodbye
+      </button>
+    </div>
+  </div>
+);
+
+export default compose(
+  withHandlers<Props>({
+    sayHello: () => () => {
+      console.log('Hello');
+    },
+    sayGoodbye: () => () => {
+      console.log('Goodbye');
+    },
+  }),
+)(Component);
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose} from '@truefit/bach';
 import {withHandlers} from '@truefit/bach-recompose';

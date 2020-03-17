@@ -15,6 +15,7 @@
       "bach-withlayouteffect",
       "bach-withmemo",
       "bach-withref",
+      "bach-withreducer",
       "bach-withstate",
       "bach-withhook",
       "bach-withstaticprops"
@@ -43,16 +44,27 @@
       "bachmaterialui-withstyles",
       "bachmaterialui-withtheme"
     ],
-    "@truefit/bach-formik": [
-      "bachformik-overview",
-      "bachformik-withformik",
-      "bachformik-withfield",
-      "bachformik-withformikcontext"
-    ],
+    "@truefit/bach-formik": ["bachformik-overview", "bachformik-withformik"],
     "@truefit/bach-rn-elements": [
       "bachrnelements-overview",
-      "bachrnelements-withstyles",
-      "bachrnelements-withbadge"
+      "bachrnelements-withstyles"
+    ],
+    "@truefit/bach-react-router": [
+      "bachreactrouter-overview",
+      "bachreactrouter-withhistory",
+      "bachreactrouter-withlocation",
+      "bachreactrouter-withparams",
+      "bachreactrouter-withroutematch"
+    ],
+    "@truefit/bach-react-navigation": [
+      "bachreactnavigation-overview",
+      "bachreactnavigation-withfocuseffect",
+      "bachreactnavigation-withisfocused",
+      "bachreactnavigation-withlinking",
+      "bachreactnavigation-withnavigation",
+      "bachreactnavigation-withnavigationstate",
+      "bachreactnavigation-withroute",
+      "bachreactnavigation-withscrolltotop"
     ]
   },
   "docs-other": {}

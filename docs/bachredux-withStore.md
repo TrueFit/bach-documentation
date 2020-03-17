@@ -11,7 +11,37 @@ There are no parameters for this enhancer.
 
 ## Example
 
+#### Typescript
+
+```Typescript
+import React from 'react';
+import {compose} from '@truefit/bach';
+import {withStore} from '@truefit/bach-redux';
+import {Store} from 'redux';
+
+type Props = {
+  store: Store;
+};
+
+const WithStore = ({store}: Props) => (
+  <div>
+    <h1>withStore</h1>
+    <ul>
+      {store.getState().features.example.test.map((todo: string) => (
+        <li key={todo}>{todo}</li>
+      ))}
+    </ul>
+  </div>
+);
+
+export default compose(
+  withStore()
+)(WithStore);
 ```
+
+#### Javascript
+
+```Javascript
 import React from 'react';
 import {compose} from '@truefit/bach';
 import {withStore} from '@truefit/bach-redux';
